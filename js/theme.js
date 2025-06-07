@@ -113,7 +113,12 @@ class ThemeManager {
         "customer.comment.title.1":"Bu layihələr mənim üçün əsl xilaskar oldu. Müştərilərə sürətli və keyfiyyətli işlər təqdim edə bilirəm.",
         "customer.comment.title.2":"Kodun keyfiyyəti və dizayn həllərinin müasirliyi məni heyran etdi. Dəfələrlə istifadə edəcəyəm.",
         "customer.comment.title.3":"Layihələrin qiymətləri keyfiyyətinə görə kifayət qədər münasibdir. Dəstək xidməti də əla işləyir.",
-
+        "customer.comment.name.1":"Əli Məmmədov",
+        "customer.comment.name.2":"Aynur Hüseynova",
+        "customer.comment.name.3":"Rəşad Əliyev",
+        "customer.comment.position.1":"Freelancer",
+        "customer.comment.position.2":"Web Developer",
+        "customer.comment.position.3":"Startup Sahibi",
 
 
         // Projects
@@ -215,7 +220,14 @@ class ThemeManager {
         "customer.comment.title.1":"These projects have been a real lifesaver for me. I can deliver fast and high-quality work to clients.",
         "customer.comment.title.2":"I was impressed by the quality of the code and the modernity of the design solutions. I will use it again and again.",
         "customer.comment.title.3":"The prices of the projects are quite reasonable compared to the quality. The support service also works great.",
-        
+        "customer.comment.name.1":"Ali Mammadov",
+        "customer.comment.name.2":"Aynur Hüseynova",
+        "customer.comment.name.3":"Rəşad Aliyev",
+        "customer.comment.position.1":"Freelancer",
+        "customer.comment.position.2":"Web Developer",
+        "customer.comment.position.3":"Startup Sahibi",
+
+
 
         // Projects
         "projects.title": "Ready Frontend Projects",
@@ -316,7 +328,12 @@ class ThemeManager {
         "customer.comment.title.1":"Bu projeler benim için gerçek bir cankurtaran oldu. Müşterilere hızlı ve yüksek kaliteli işler teslim edebiliyorum.",
         "customer.comment.title.2":"Kodun kalitesi ve tasarım çözümlerinin modernliği beni etkiledi. Tekrar tekrar kullanacağım.",
         "customer.comment.title.3":"Projelerin fiyatları kaliteye göre oldukça makul. Destek hizmeti de harika çalışıyor.",
-
+        "customer.comment.name.1":"Ali Memmedov",
+        "customer.comment.name.2":"Aynur Hüseynova",
+        "customer.comment.name.3":"Reşat Aliyev",
+        "customer.comment.position.1":"Freelancer",
+        "customer.comment.position.2":"Web Developer",
+        "customer.comment.position.3":"Startup Sahibi",
 
 
         // Projects

@@ -588,8 +588,8 @@
         .view-all-btn {
             display: block;
             margin: 3rem auto 0;
-            background: var(--gradient-tertiary);
-            color: white;
+            background: var(--gradient-primary);
+            color: rgb(255, 255, 255);
             border: none;
             padding: 1rem 2.5rem;
             border-radius: 30px;
@@ -603,7 +603,7 @@
 
         .view-all-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(79, 172, 254, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 136, 255, 0.4);
         }
 
         /* Responsive Design */

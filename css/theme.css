@@ -1,0 +1,258 @@
+/* Dark/Light Theme Styles */
+
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #00cec9;
+  --accent-color: #fd79a8;
+  --dark-color: #2d3436;
+  --light-color: #f9f9f9;
+  --gray-color: #636e72;
+  --success-color: #00b894;
+  --warning-color: #fdcb6e;
+  --danger-color: #d63031;
+  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* Light theme colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --border-color: #e1e5e9;
+  --card-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #2d3436;
+  --footer-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #504d4d;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --card-bg: #2d2d2d;
+  --header-bg: rgba(247, 247, 247, 0.95);
+  --footer-bg: #121212;
+  --footer-text: #f5f5f5;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+}
+
+.project-card,
+.feature-card,
+.testimonial-content,
+.sidebar-widget,
+.contact-form-container,
+.contact-info,
+.blog-post,
+.featured-post {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.projects-section,
+.features,
+.blog-content,
+.contact-section,
+.skills {
+  background-color: var(--bg-secondary);
+}
+
+/* Form elements */
+input,
+select,
+textarea {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* Theme transition animation */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark theme specific adjustments */
+[data-theme="dark"] .glitch {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .code-container {
+  background-color: #0d1117;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.8));
+}
+
+[data-theme="dark"] .newsletter {
+  background: var(--gradient-primary);
+}
+
+[data-theme="dark"] .mission {
+  background: var(--gradient-primary);
+}
+
+[data-theme="dark"] .blog-hero,
+[data-theme="dark"] .contact-hero,
+[data-theme="dark"] .page-header,
+[data-theme="dark"] .hero-about {
+  background: var(--gradient-primary);
+}
+
+/* Footer in dark mode */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+/* Theme toggle button states */
+[data-theme="dark"] .theme-btn i::before {
+  content: "\f185"; /* sun icon */
+}
+
+.theme-btn i::before {
+  content: "\f186"; /* moon icon */
+}
+
+/* Language switcher in dark mode */
+[data-theme="dark"] .language-switcher {
+  background: rgba(108, 92, 231, 0.2);
+}
+
+[data-theme="dark"] .lang-btn {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .lang-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Dark mode for specific elements */
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .testimonial-content,
+[data-theme="dark"] .contact-form-container,
+[data-theme="dark"] .contact-info,
+[data-theme="dark"] .sidebar-widget,
+[data-theme="dark"] .blog-post,
+[data-theme="dark"] .featured-post,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .faq-question {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .feature-card:hover,
+[data-theme="dark"] .project-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .nav-links a,
+[data-theme="dark"] .logo,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .post-meta,
+[data-theme="dark"] .categories a,
+[data-theme="dark"] .popular-date {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .burger div {
+  background-color: var(--text-primary);
+}
+
+[data-theme="dark"] .pagination-btn {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .pagination-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="dark"] .dot {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .dot.active {
+  background-color: var(--primary-color);
+}
+
+/* About page dark mode */
+[data-theme="dark"] .skill-bar {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .timeline::before {
+  background: var(--gradient-primary);
+}
+
+[data-theme="dark"] .timeline-date {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+/* Blog page dark mode */
+[data-theme="dark"] .tag {
+  background: rgba(108, 92, 231, 0.2);
+}
+
+[data-theme="dark"] .tag:hover {
+  background: var(--primary-color);
+}
+
+/* Contact page dark mode */
+[data-theme="dark"] .faq-question:hover {
+  background-color: rgba(108, 92, 231, 0.1);
+}
+
+[data-theme="dark"] .faq-answer {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .contact-icon {
+  background: var(--gradient-primary);
+}
+
+[data-theme="dark"] .checkmark {
+  border-color: var(--border-color);
+}

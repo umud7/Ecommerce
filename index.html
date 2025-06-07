@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Jalmid Craft</title>
+</head>
+<body>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+
+    <header>
+        <div class="logo">
+            <span class="highlight">J</span>almid<span class="highlight">C</span>raft
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Ana Səhifə</a></li>
+                <li><a href="projects.html">Layihələr</a></li>
+                <li><a href="about.html">Haqqımdaa</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+        </nav>
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="az">AZ</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
+            </div>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <main>
+
+    <section class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Hazır Frontend Layihələri" data-translate="hero.title">Hazır Frontend Layihələri</h1>
+                <p class="subtitle" data-translate="hero.subtitle">İndi al, dərhal istifadə et</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn primary" data-translate="hero.cta.projects">Layihələrə Bax</a>
+                    <a href="about.html" class="btn secondary" data-translate="hero.cta.about">Haqqımda</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-container">
+                    <pre><code>
+&lt;div class="awesome-project"&gt;
+  &lt;header class="creative"&gt;
+    &lt;h1&gt;Sənin Layihən&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;section class="features"&gt;
+      &lt;!-- Xüsusiyyətlər --&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+                    </code></pre>
+                </div>
+            </div>
+    </section>
+
+    <section class="featured-projects">
+        <h2 class="section-title" data-translate="proj.title">Ən Yaxşı Layihələr</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/Home/BestPro-1.png" alt="E-commerce Layihəsi">
+                    <div class="project-overlay">
+                        <button class="btn small details-btn" data-project="project1">Ətraflı</button>
+                        <a href="https://jalmidmedia.netlify.app/" class="btn small secondary" target="_blank">Canlı Demo</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Şablon</h3>
+                    <p data-translate="proj.desc.1">Tam funksional online mağaza şablonu</p>
+                    <div class="project-meta">
+                        <span class="price" data-translate="price.title.1">129 AZN</span>
+                        <span class="tech">HTML, CSS, JS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Portfolio Layihəsi">
+                    <div class="project-overlay">
+                        <button class="btn small details-btn" data-project="project2">Ətraflı</button>
+                        <a href="demo/portfolio/index.html" class="btn small secondary" target="_blank">Canlı Demo</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Portfolio Şablon</h3>
+                    <p data-translate="proj.desc.2">Yaradıcı şəxslər üçün portfolio saytı</p>
+                    <div class="project-meta">
+                        <span class="price"data-translate="price.title.2">99 AZN</span>
+                        <span class="tech">HTML, CSS, JS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Landing Page">
+                    <div class="project-overlay">
+                        <button class="btn small details-btn" data-project="project3">Ətraflı</button>
+                        <a href="demo/landing/index.html" class="btn small secondary" target="_blank">Canlı Demo</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Landing Page</h3>
+                    <p data-translate="proj.desc.3">Məhsul və xidmətlər üçün landing səhifə</p>
+                    <div class="project-meta">
+                        <span class="price"data-translate="price.title.3">79 AZN</span>
+                        <span class="tech">HTML, CSS, JS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-btn">
+            <a href="projects.html" class="btn primary" data-translate="proj.button">Bütün Layihələr</a>
+        </div>
+    </section>
+
+    <!-- Modal Pəncərə -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-content-area"></div>
+        </div>
+    </div>
+
+    <!-- Layihə Məlumatları (Gizli) -->
+    <div id="project-details" style="display: none;">
+        <!-- Layihə 1 - E-commerce -->
+        <div id="project1">
+            <h2>E-commerce Şablon</h2>
+            <div class="project-price-info">
+                <div class="price-large">129 AZN</div>
+                <p>Tam funksional online mağaza şablonu</p>
+            </div>
+            <div class="project-detail-content">
+                <img src="/placeholder.svg?height=400&width=600" alt="E-commerce Şablon">
+                <div class="project-description">
+                    <h3>Layihə Haqqında</h3>
+                    <p>Bu e-commerce şablon müştərilərə onlayn alış-veriş etmək imkanı verir. Şablon müasir texnologiyalar istifadə edilərək hazırlanmışdır və tam responsivdir.</p>
+                    
+                    <h3>İstifadə Olunan Texnologiyalar</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                    </ul>
+                    
+                    <h3>Əsas Xüsusiyyətlər</h3>
+                    <ul>
+                        <li>Responsive dizayn</li>
+                        <li>Məhsul kataloqu</li>
+                        <li>Alış-veriş səbəti</li>
+                        <li>Axtarış funksiyası</li>
+                        <li>Məhsul filtrasiyası</li>
+                        <li>Əlaqə forması</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layihə 2 - Portfolio -->
+        <div id="project2">
+            <h2>Portfolio Şablon</h2>
+            <div class="project-price-info">
+                <div class="price-large">99 AZN</div>
+                <p>Yaradıcı şəxslər üçün portfolio saytı</p>
+            </div>
+            <div class="project-detail-content">
+                <img src="/placeholder.svg?height=400&width=600" alt="Portfolio Şablon">
+                <div class="project-description">
+                    <h3>Layihə Haqqında</h3>
+                    <p>Bu portfolio şablon yaradıcı şəxslərin işlərini və bacarıqlarını nümayiş etdirmək üçün hazırlanmışdır. Şablon müasir və minimalist dizayna malikdir.</p>
+                    
+                    <h3>İstifadə Olunan Texnologiyalar</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>SASS</li>
+                        <li>AOS Animation</li>
+                    </ul>
+                    
+                    <h3>Əsas Xüsusiyyətlər</h3>
+                    <ul>
+                        <li>Responsive dizayn</li>
+                        <li>Animasiyalı keçidlər</li>
+                        <li>Layihə qalereya</li>
+                        <li>Bacarıqlar bölməsi</li>
+                        <li>Əlaqə forması</li>
+                        <li>Blog bölməsi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layihə 3 - Landing Page -->
+        <div id="project3">
+            <h2>Landing Page Şablon</h2>
+            <div class="project-price-info">
+                <div class="price-large">79 AZN</div>
+                <p>Məhsul və xidmətlər üçün landing səhifə</p>
+            </div>
+            <div class="project-detail-content">
+                <img src="/placeholder.svg?height=400&width=600" alt="Landing Page Şablon">
+                <div class="project-description">
+                    <h3>Layihə Haqqında</h3>
+                    <p>Bu landing page şablon məhsul və xidmətlərin təqdimatı üçün hazırlanmışdır. Yüksək konversiya dərəcəsi üçün optimallaşdırılmışdır.</p>
+                    
+                    <h3>İstifadə Olunan Texnologiyalar</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                    </ul>
+                    
+                    <h3>Əsas Xüsusiyyətlər</h3>
+                    <ul>
+                        <li>Responsive dizayn</li>
+                        <li>Hero bölməsi</li>
+                        <li>Xidmətlər bölməsi</li>
+                        <li>Testimonials</li>
+                        <li>Qiymət cədvəli</li>
+                        <li>Əlaqə forması</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <section class="features">
+            <h2 class="section-title" data-translate="why.title">Niyə Bizi Seçməlisiniz?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 data-translate="why.title.header.1">Sürətli Başlanğıc</h3>
+                    <p data-translate="why.title.desc.1">Layihələrimiz dərhal istifadəyə hazırdır, vaxtınıza qənaət edin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-translate="why.title.header.2">Tam Responsiv</h3>
+                    <p data-translate="why.title.desc.2">Bütün cihazlarda mükəmməl görünüş üçün tam responsiv dizayn.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-translate="why.title.header.3">Təmiz Kod</h3>
+                    <p data-translate="why.title.desc.3">Asanlıqla dəyişdirilə bilən təmiz və strukturlu kod.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-translate="why.title.header.4">Dəstək</h3>
+                    <p data-translate="why.title.desc.4">Alışdan sonra texniki dəstək və suallarınıza cavab.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2 class="section-title" data-translate="customer.comment.header">Müştəri Rəyləri</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p data-translate="customer.comment.title.1">"Bu layihələr mənim üçün əsl xilaskar oldu. Müştərilərə sürətli və keyfiyyətli işlər təqdim edə bilirəm."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Əli Məmmədov">
+                            <div>
+                                <h4>Əli Məmmədov</h4>
+                                <p>Freelancer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p data-translate="customer.comment.title.2">"Kodun keyfiyyəti və dizayn həllərinin müasirliyi məni heyran etdi. Dəfələrlə istifadə edəcəyəm."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Aynur Hüseynova">
+                            <div>
+                                <h4>Aynur Hüseynova</h4>
+                                <p>Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p data-translate="customer.comment.title.3">"Layihələrin qiyməti keyfiyyətinə görə çox münasibdir. Dəstək xidməti də əla işləyir."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Rəşad Əliyev">
+                            <div>
+                                <h4>Rəşad Əliyev</h4>
+                                <p>Startup Sahibi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <section class="blog-section">
+        <div class="section-header">
+            <div class="floating-elements">
+                <div class="floating-circle"></div>
+                <div class="floating-circle"></div>
+                <div class="floating-circle"></div>
+            </div>
+            <h2 class="section-title">Son Bloq Yazıları</h2>
+            <p class="section-subtitle">Texnologiya, dizayn və inkişaf haqqında ən son məqalələr və məsləhətlər</p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card" data-category="web-development">
+                <div class="blog-image">
+                    <img src="/placeholder.svg?height=250&width=400" alt="React.js Öyrənmək">
+                    <div class="blog-category">Web Development</div>
+                    <div class="blog-date">
+                        <div>15</div>
+                        <div>Yan</div>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">React.js ilə Modern Web Tətbiqlər Yaratmaq</h3>
+                    <p class="blog-excerpt">React.js istifadə edərək müasir və interaktiv web tətbiqlər yaratmağın əsas prinsipləri və ən yaxşı təcrübələr haqqında ətraflı bələdçi.</p>
+                    
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <img src="/placeholder.svg?height=35&width=35" alt="Müəllif" class="author-avatar">
+                            <span class="author-name">Əli Məmmədov</span>
+                        </div>
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <span>👁</span>
+                                <span>1.2k</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>💬</span>
+                                <span>24</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>⏱</span>
+                                <span>5 dəq</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-actions">
+                        <button class="read-more-btn" onclick="readMore(1)">Oxumağa Davam Et</button>
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">
+                            <span>🔖</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="design">
+                <div class="blog-image">
+                    <img src="/placeholder.svg?height=250&width=400" alt="UI/UX Dizayn">
+                    <div class="blog-category">Dizayn</div>
+                    <div class="blog-date">
+                        <div>12</div>
+                        <div>Yan</div>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">2024-də UI/UX Dizayn Trendləri</h3>
+                    <p class="blog-excerpt">Bu il ən populyar UI/UX dizayn trendləri, rəng palitələri və istifadəçi təcrübəsini yaxşılaşdırmaq üçün yeni yanaşmalar.</p>
+                    
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <img src="/placeholder.svg?height=35&width=35" alt="Müəllif" class="author-avatar">
+                            <span class="author-name">Leyla Həsənova</span>
+                        </div>
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <span>👁</span>
+                                <span>856</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>💬</span>
+                                <span>18</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>⏱</span>
+                                <span>7 dəq</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-actions">
+                        <button class="read-more-btn" onclick="readMore(2)">Oxumağa Davam Et</button>
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">
+                            <span>🔖</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="javascript">
+                <div class="blog-image">
+                    <img src="/placeholder.svg?height=250&width=400" alt="JavaScript ES6+">
+                    <div class="blog-category">JavaScript</div>
+                    <div class="blog-date">
+                        <div>08</div>
+                        <div>Yan</div>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">JavaScript ES6+ Xüsusiyyətləri və İstifadəsi</h3>
+                    <p class="blog-excerpt">Modern JavaScript-in ən güclü xüsusiyyətləri: Arrow functions, Destructuring, Async/Await və daha çoxu haqqında praktik nümunələr.</p>
+                    
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <img src="/placeholder.svg?height=35&width=35" alt="Müəllif" class="author-avatar">
+                            <span class="author-name">Rəşad Quliyev</span>
+                        </div>
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <span>👁</span>
+                                <span>2.1k</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>💬</span>
+                            <span>42</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>⏱</span>
+                                <span>8 dəq</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-actions">
+                        <button class="read-more-btn" onclick="readMore(3)">Oxumağa Davam Et</button>
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">
+                            <span>🔖</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <button class="view-all-btn" onclick="viewAllBlogs()">
+            Bütün Bloq Yazılarını Gör
+        </button>
+    </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Yeniliklərdən Xəbərdar Olun</h2>
+                <p>Yeni layihələr və endirimlər haqqında məlumat almaq üçün abunə olun.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="E-poçt ünvanınız" required>
+                    <button type="submit" class="btn primary">Abunə Ol</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">F</span>rontEnd<span class="highlight">M</span>asters
+                <p>Hazır Frontend Layihələri</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Səhifələr</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="projects.html">Layihələr</a></li>
+                        <li><a href="about.html">Haqqımda</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kateqoriyalar</h3>
+                    <ul>
+                        <li><a href="projects.html?category=landing">Landing Pages</a></li>
+                        <li><a href="projects.html?category=ecommerce">E-commerce</a></li>
+                        <li><a href="projects.html?category=portfolio">Portfolio</a></li>
+                        <li><a href="projects.html?category=blog">Blog Şablonları</a></li>
+                        <li><a href="projects.html?category=dashboard">Admin Panelləri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Əlaqə</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@frontendmasters.az</li>
+                        <li><i class="fas fa-phone"></i> +994 50 123 45 67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FrontEndMasters. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

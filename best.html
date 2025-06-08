@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ən Çox Satılanlar - E-Mağaza</title>
+    <link rel="stylesheet" href="css/best.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>E-Mağaza</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Ən Yenilər</a></li>
+                    <li><a href="bestsellers.html" class="active">Ən Çox Satılanlar</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Ən Çox Satılan Məhsullar</h1>
+            <p>Müştərilərimizin ən çox seçdiyi məhsullar</p>
+        </section>
+
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-fire"></i> Filtrlər</h3>
+                        <button class="clear-filters-btn" onclick="clearAllFilters()">
+                            <i class="fas fa-times"></i> Təmizlə
+                        </button>
+                    </div>
+                    
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label><i class="fas fa-tag"></i> Kateqoriya</label>
+                            <select id="categoryFilter" onchange="applyFilters()">
+                                <option value="">Hamısı</option>
+                                <option value="gaming">Oyun</option>
+                                <option value="fashion">Moda</option>
+                                <option value="electronics">Elektronika</option>
+                                <option value="home">Ev</option>
+                                <option value="audio">Audio</option>
+                                <option value="camera">Kamera</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label><i class="fas fa-chart-line"></i> Sıralama</label>
+                            <select id="sortFilter" onchange="applyFilters()">
+                                <option value="">Standart</option>
+                                <option value="sales-high">Ən Çox Satılan</option>
+                                <option value="sales-low">Ən Az Satılan</option>
+                                <option value="price-low">Qiymət: Aşağıdan Yuxarı</option>
+                                <option value="price-high">Qiymət: Yuxarıdan Aşağı</option>
+                                <option value="name-az">Ad: A-Z</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group price-range">
+                            <label><i class="fas fa-money-bill-wave"></i> Qiymət aralığı</label>
+                            <div class="price-inputs">
+                                <input type="number" id="minPrice" placeholder="Min" onchange="applyFilters()">
+                                <span>-</span>
+                                <input type="number" id="maxPrice" placeholder="Max" onchange="applyFilters()">
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label><i class="fas fa-users"></i> Satış sayı</label>
+                            <select id="salesFilter" onchange="applyFilters()">
+                                <option value="">Hamısı</option>
+                                <option value="high">10,000+ satış</option>
+                                <option value="medium">5,000-10,000 satış</option>
+                                <option value="low">5,000-dən az</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-results">
+                        <span id="resultsCount">6 məhsul tapıldı</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add to Cart Animation -->
+    <div class="cart-animation" id="cartAnimation">
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Məhsul səbətə əlavə edildi!</span>
+    </div>
+
+    <script src="js/best.js"></script>
+</body>
+</html>

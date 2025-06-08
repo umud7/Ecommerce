@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Jalmid Craft</title>
+</head>
+<body>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+
+    <header>
+        <div class="logo">
+            <span class="highlight">J</span>almid<span class="highlight">C</span>raft
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Səhifə</a></li>
+                <li><a href="projects.html">Layihələr</a></li>
+                <li><a href="about.html">Haqqımda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Əlaqə</a></li>
+            </ul>
+        </nav>
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="az">AZ</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
+            </div>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+
+
+      <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1 data-translate="contact.title">Əlaqə Saxlayın</h1>
+                <p data-translate="contact.subtitle">Suallarınız var? Layihə sifarişi vermək istəyirsiniz? Bizə yazın!</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 data-translate="contact.info">Əlaqə Məlumatları</h2>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 data-translate="contact.email">E-poçt</h3>
+                                <p>info@frontendmasters.az</p>
+                                <p>support@frontendmasters.az</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 data-translate="contact.phone">Telefon</h3>
+                                <p>+994 50 123 45 67</p>
+                                <p>+994 55 987 65 43</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 data-translate="contact.address">Ünvan</h3>
+                                <p>Bakı şəhəri, Nəsimi rayonu</p>
+                                <p>Azərbaycan Respublikası</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <h2 data-translate="contact.form.title">Mesaj Göndərin</h2>
+                            
+                            <div class="form-group">
+                                <label for="name" data-translate="contact.form.name">Ad Soyad *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" data-translate="contact.form.email">E-poçt *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" data-translate="contact.form.phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" data-translate="contact.form.subject">Mövzu *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Mövzu seçin</option>
+                                    <option value="project-order">Layihə Sifarişi</option>
+                                    <option value="custom-project">Xüsusi Layihə</option>
+                                    <option value="support">Texniki Dəstək</option>
+                                    <option value="partnership">Əməkdaşlıq</option>
+                                    <option value="other">Digər</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Büdcə Aralığı</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Büdcə seçin</option>
+                                    <option value="50-100">50-100 AZN</option>
+                                    <option value="100-300">100-300 AZN</option>
+                                    <option value="300-500">300-500 AZN</option>
+                                    <option value="500+">500+ AZN</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" data-translate="contact.form.message">Mesajınız *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Layihəniz haqqında ətraflı məlumat verin..."></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Yeniliklərdən xəbərdar olmaq istəyirəm
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    <a href="#" class="terms-link">Şərtlər və Qaydalar</a>ı qəbul edirəm *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn primary submit-btn">
+                                <span class="btn-text" data-translate="contact.form.submit">Mesaj Göndər</span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Göndərilir...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="contact.faq">Tez-tez Verilən Suallar</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Layihələri necə satın ala bilərəm?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Layihələr səhifəsindən bəyəndiyiniz layihəni seçin və "Satın Al" düyməsinə basın. Ödəniş prosesi çox sadədir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Layihələrdə dəyişiklik edə bilərəmmi?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bəli, bütün layihələr tam açıq kodludur və istədiyiniz kimi dəyişiklik edə bilərsiniz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Texniki dəstək verirsizmi?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bəli, satın aldığınız layihələr üçün 30 gün texniki dəstək təqdim edirik.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Xüsusi layihə sifariş edə bilərəmmi?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Əlbəttə! Xüsusi layihələr üçün bizimlə əlaqə saxlayın və tələblərinizi bildirin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+   <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">F</span>rontEnd<span class="highlight">M</span>asters
+                <p>Hazır Frontend Layihələri</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Səhifələr</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="projects.html">Layihələr</a></li>
+                        <li><a href="about.html">Haqqımda</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kateqoriyalar</h3>
+                    <ul>
+                        <li><a href="projects.html?category=landing">Landing Pages</a></li>
+                        <li><a href="projects.html?category=ecommerce">E-commerce</a></li>
+                        <li><a href="projects.html?category=portfolio">Portfolio</a></li>
+                        <li><a href="projects.html?category=blog">Blog Şablonları</a></li>
+                        <li><a href="projects.html?category=dashboard">Admin Panelləri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Əlaqə</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@frontendmasters.az</li>
+                        <li><i class="fas fa-phone"></i> +994 50 123 45 67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FrontEndMasters. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+</html>

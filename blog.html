@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Jalmid Craft</title>
+</head>
+<body>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+
+    <header>
+        <div class="logo">
+            <span class="highlight">J</span>almid<span class="highlight">C</span>raft
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Səhifə</a></li>
+                <li><a href="projects.html">Layihələr</a></li>
+                <li><a href="about.html">Haqqımda</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+        </nav>
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="az">AZ</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
+            </div>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <h1 data-translate="blog.title">Frontend Blog</h1>
+                <p data-translate="blog.subtitle">Web development ipuçları, layihə yaratma prosesi və faydalı məlumatlar</p>
+                <div class="search-container">
+                    <input type="text" id="blog-search" placeholder="Məqalələrdə axtarış..." data-translate="blog.search">
+                    <button type="button" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <div class="blog-layout">
+                    <div class="blog-main">
+                        <div class="featured-post">
+                            <div class="post-image">
+                                <img src="img/Blog/Blog-Big-Photo.jpg" alt="Featured Post">
+                                <div class="post-category">Əsas Məqalə</div>
+                            </div>
+                            <div class="post-content">
+                                <h2><a href="blog-post.html?id=1">2025-də Frontend Development Trendləri</a></h2>
+                                <p>Bu il frontend development sahəsində hansı texnologiyalar populyar olacaq və hansı trendlərə diqqət etməliyik?</p>
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> 15 Yanvar 2025</span>
+                                    <span class="post-author"><i class="fas fa-user"></i> Admin</span>
+                                    <span class="post-views"><i class="fas fa-eye"></i> 1,234 baxış</span>
+                                </div>
+                                <a href="blog-post.html?id=1" class="read-more" data-translate="blog.readmore">Daha ətraflı <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-posts">
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="img/Blog/Blog-1.jpg" alt="CSS Grid vs Flexbox">
+                                    <div class="post-category">CSS</div>
+                                </div>
+                                <div class="post-content">
+                                    <h3><a href="blog-post.html?id=2">CSS Grid vs Flexbox: Hansını İstifadə Etməli?</a></h3>
+                                    <p>CSS Grid və Flexbox arasındakı fərqlər və hansı hallarda hansını istifadə etməyin daha məqsədəuyğun olduğu...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date"><i class="fas fa-calendar"></i> 12 Yanvar 2025</span>
+                                        <span class="post-views"><i class="fas fa-eye"></i> 856 baxış</span>
+                                    </div>
+                                    <a href="blog-post.html?id=2" class="read-more">Oxu <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="img/Blog/Blog-2.jpg" alt="JavaScript ES6+">
+                                    <div class="post-category">JavaScript</div>
+                                </div>
+                                <div class="post-content">
+                                    <h3><a href="blog-post.html?id=3">JavaScript ES6+ Xüsusiyyətləri</a></h3>
+                                    <p>Modern JavaScript-in ən faydalı xüsusiyyətləri və onların praktiki istifadə nümunələri...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date"><i class="fas fa-calendar"></i> 10 Yanvar 2025</span>
+                                        <span class="post-views"><i class="fas fa-eye"></i> 1,123 baxış</span>
+                                    </div>
+                                    <a href="blog-post.html?id=3" class="read-more">Oxu <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="img/Blog/Blog-3.jpg" alt="Responsive Design">
+                                    <div class="post-category">Dizayn</div>
+                                </div>
+                                <div class="post-content">
+                                    <h3><a href="blog-post.html?id=4">Responsive Design: Mobil-First Yanaşma</a></h3>
+                                    <p>Mobil cihazlar üçün dizayn etməyin əsas prinsipləri və responsive web saytlar yaratma qaydaları...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date"><i class="fas fa-calendar"></i> 8 Yanvar 2025</span>
+                                        <span class="post-views"><i class="fas fa-eye"></i> 967 baxış</span>
+                                    </div>
+                                    <a href="blog-post.html?id=4" class="read-more">Oxu <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="img/Blog/Blog-4.jpg" alt="Web Performance">
+                                    <div class="post-category">Performance</div>
+                                </div>
+                                <div class="post-content">
+                                    <h3><a href="blog-post.html?id=5">Web Saytın Performansını Artırma Yolları</a></h3>
+                                    <p>Web saytınızın yükləmə sürətini artırmaq və istifadəçi təcrübəsini yaxşılaşdırmaq üçün praktiki məsləhətlər...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date"><i class="fas fa-calendar"></i> 5 Yanvar 2025</span>
+                                        <span class="post-views"><i class="fas fa-eye"></i> 1,456 baxış</span>
+                                    </div>
+                                    <a href="blog-post.html?id=5" class="read-more">Oxu <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="img/Blog/Blog-5.jpg" alt="Git və GitHub">
+                                    <div class="post-category">Alətlər</div>
+                                </div>
+                                <div class="post-content">
+                                    <h3><a href="blog-post.html?id=6">Git və GitHub: Başlanğıc Bələdçisi</a></h3>
+                                    <p>Version control sistemləri haqqında bilməli olduğunuz hər şey və GitHub-da layihələrinizi necə idarə etməli...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date"><i class="fas fa-calendar"></i> 3 Yanvar 2025</span>
+                                        <span class="post-views"><i class="fas fa-eye"></i> 789 baxış</span>
+                                    </div>
+                                    <a href="blog-post.html?id=6" class="read-more">Oxu <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </article>
+
+                            <article class="blog-post">
+                                <div class="post-image">
+                                    <img src="img/Blog/Blog-6.jpg" alt="React Hooks">
+                                    <div class="post-category">React</div>
+                                </div>
+                                <div class="post-content">
+                                    <h3><a href="blog-post.html?id=7">React Hooks: useState və useEffect</a></h3>
+                                    <p>React-in ən çox istifadə olunan hook-ları və onların praktiki tətbiq nümunələri...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date"><i class="fas fa-calendar"></i> 1 Yanvar 2025</span>
+                                        <span class="post-views"><i class="fas fa-eye"></i> 1,234 baxış</span>
+                                    </div>
+                                    <a href="blog-post.html?id=7" class="read-more">Oxu <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <aside class="blog-sidebar">
+                        <div class="sidebar-widget">
+                            <h3 data-translate="blog.popular">Populyar Məqalələr</h3>
+                            <div class="popular-posts">
+                                <div class="popular-post">
+                                    <img src="img/Blog/Blog-Big-Photo.jpg" alt="Popular Post">
+                                    <div class="popular-content">
+                                        <h4><a href="blog-post.html?id=1">2025-də Frontend Development Trendləri</a></h4>
+                                        <span class="popular-date">15 Yanvar 2025</span>
+                                    </div>
+                                </div>
+                                <div class="popular-post">
+                                    <img src="img/Blog/Blog-4.jpg" alt="Popular Post">
+                                    <div class="popular-content">
+                                        <h4><a href="blog-post.html?id=5">Web Saytın Performansını Artırma</a></h4>
+                                        <span class="popular-date">5 Yanvar 2025</span>
+                                    </div>
+                                </div>
+                                <div class="popular-post">
+                                    <img src="img/Blog/Blog-2.jpg" alt="Popular Post">
+                                    <div class="popular-content">
+                                        <h4><a href="blog-post.html?id=3">JavaScript ES6+ Xüsusiyyətləri</a></h4>
+                                        <span class="popular-date">10 Yanvar 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3 data-translate="blog.categories">Kateqoriyalar</h3>
+                            <ul class="categories">
+                                <li><a href="#" data-category="all">Hamısı <span>(24)</span></a></li>
+                                <li><a href="#" data-category="css">CSS <span>(8)</span></a></li>
+                                <li><a href="#" data-category="javascript">JavaScript <span>(12)</span></a></li>
+                                <li><a href="#" data-category="react">React <span>(6)</span></a></li>
+                                <li><a href="#" data-category="design">Dizayn <span>(5)</span></a></li>
+                                <li><a href="#" data-category="performance">Performance <span>(4)</span></a></li>
+                                <li><a href="#" data-category="tools">Alətlər <span>(7)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3 data-translate="blog.tags">Etiketlər</h3>
+                            <div class="tags">
+                                <a href="#" class="tag">HTML5</a>
+                                <a href="#" class="tag">CSS3</a>
+                                <a href="#" class="tag">JavaScript</a>
+                                <a href="#" class="tag">React</a>
+                                <a href="#" class="tag">Vue.js</a>
+                                <a href="#" class="tag">Node.js</a>
+                                <a href="#" class="tag">Responsive</a>
+                                <a href="#" class="tag">Performance</a>
+                                <a href="#" class="tag">SEO</a>
+                                <a href="#" class="tag">Git</a>
+                                <a href="#" class="tag">GitHub</a>
+                                <a href="#" class="tag">Webpack</a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget newsletter-widget">
+                            <h3>Xəbər bülleteni</h3>
+                            <p data-translate="blog.newsletter">Yeni məqalələrdən xəbərdar olmaq üçün abunə olun</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="E-poçt ünvanınız" required>
+                                <button type="submit" class="btn primary" data-translate="blog.subscribe">Abunə Ol</button>
+                            </form>
+                        </div>
+
+                        
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-cta">
+            <div class="container">
+                <h2>Öz Layihənizi Yaratmaq İstəyirsiniz?</h2>
+                <p>Hazır şablonlarımızla vaxtınıza qənaət edin və dərhal işə başlayın</p>
+                <a href="projects.html" class="btn primary" data-translate="hero.cta.projects">Layihələrə Baxın</a>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">F</span>rontEnd<span class="highlight">M</span>asters
+                <p>Hazır Frontend Layihələri</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Səhifələr</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="projects.html">Layihələr</a></li>
+                        <li><a href="about.html">Haqqımda</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kateqoriyalar</h3>
+                    <ul>
+                        <li><a href="projects.html?category=landing">Landing Pages</a></li>
+                        <li><a href="projects.html?category=ecommerce">E-commerce</a></li>
+                        <li><a href="projects.html?category=portfolio">Portfolio</a></li>
+                        <li><a href="projects.html?category=blog">Blog Şablonları</a></li>
+                        <li><a href="projects.html?category=dashboard">Admin Panelləri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Əlaqə</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@frontendmasters.az</li>
+                        <li><i class="fas fa-phone"></i> +994 50 123 45 67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FrontEndMasters. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

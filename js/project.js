@@ -70,22 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Add click analytics (optional)
-  const links = document.querySelectorAll(".category-link")
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault()
-
-      // Add click animation
-      this.style.transform = "scale(0.95)"
-      setTimeout(() => {
-        this.style.transform = ""
-      }, 150)
-
-      // You can add analytics tracking here
-      console.log("Category link clicked:", this.textContent.trim())
-    })
-  })
+  
 
   // Add keyboard navigation
   document.addEventListener("keydown", (e) => {
